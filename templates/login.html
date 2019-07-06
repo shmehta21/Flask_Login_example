@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+	<h1>Login</h1>
+	<form action="/loggedin" method="POST">
+		Username <input type="text" name="username">
+		<input type="submit">
+	</form>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	  <u1 class = "flashes">
+	  {% for message in messages %}
+	    <li>{{ message }}</li>
+	  {% endfor %}
+	{% endif %}
+	{% endwith %}
+</body>
+</html>
